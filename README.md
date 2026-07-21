@@ -13,7 +13,7 @@ It is important to visualise data in a way that reflects the influence of the bo
 
 ** Data Privacy Note** 
 
-The datasets included here are examples created to demonstrate the plotting methods. They do not contain real participant information or represent actual study results.
+The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
 
 
 
