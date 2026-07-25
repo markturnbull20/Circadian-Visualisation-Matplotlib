@@ -33,13 +33,12 @@ Import the appropriate libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-%matplotlib inline
 ```
 
 Load the dataset as a pandas DataFrame 
 
 ```python
-df = pd.read_csv("Example_Data.csv)
+df = pd.read_csv("Example_Data.csv")
 ```
 
 Create a plot that has four axes 
