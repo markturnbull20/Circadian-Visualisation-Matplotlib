@@ -23,7 +23,7 @@ The example dataset can be found here: [Example Dataset](Example_Data.csv)
 
 ** Data Privacy Note** 
 
-The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
+The datasets included here are examples created to demonstrate how to create the plots. They do not contain real participant information or represent actual study results.
 
 ### Using matplotlib to create a visualisation of the example sleepiness data 
 
