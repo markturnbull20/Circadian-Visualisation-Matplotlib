@@ -19,9 +19,7 @@ This visualisation illustrates how sleepiness and alertness change across the sl
 
 ### Example Data
 
-The example dataset can be found here:
-
-[Example Dataset](Example_Data.csv)
+The example dataset can be found here: [Example Dataset](Example_Data.csv)
 
 ** Data Privacy Note** 
 
