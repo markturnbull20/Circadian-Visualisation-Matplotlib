@@ -57,3 +57,54 @@ ax2.fill_between(df["Circadian_Time"], df["Melatonin_Value"], color="#56B4E9", a
 ax1.plot(df["Circadian_Time"], df["Sleepiness_Z_Score"], color="#E66808", marker="s", markerfacecolor = "#8F9190", 
          markeredgecolor= "#000000", markersize=10, linewidth=3, label="Sleepiness Scores (95% CI)")
 ```
+
+Add lower and upper confidence intervals 
+
+```python
+yerr = np.array([
+    pd.to_numeric(df["Sleepiness_Z_Score"]) - pd.to_numeric(df["Sleepiness_Lower"]), 
+    pd.to_numeric(df["Sleepiness_Upper"]) - pd.to_numeric(df["Sleepiness_Z_Score"]) 
+])
+x = df["Circadian_Time"]
+ax1.errorbar(
+    x, df["Sleepiness_Z_Score"],
+    yerr=yerr,
+    fmt='o', color="#8F9190", capsize=10, capthick=1.2)
+```
+
+Create title, labels, and ticks. Clock time is added as a top x axis and corresponds to time from DLMO
+
+```python
+ax1.set_title("Subjective Sleepiness Scores as a Function of Time Relative to DLMO across a 24hour Wake Period", 
+              weight="bold", pad=20)
+ax1.set_ylim(-2, 2.5)
+ax1.set_xlabel("Hours from DLMO (0hrs)", weight="bold", labelpad=15)
+ax1.set_xticklabels(df["Circadian_Time"], rotation=45)
+ax1.set_ylabel("Sleepiness Scores (Z Score)", weight="bold", labelpad=15)
+
+ax2.set_ylim(0, 35)
+ax2.set_ylabel("Melatonin Levels (pg/mL)", weight="bold", labelpad=15)
+
+ax3.set_xlim(ax1.get_xlim())
+ax3.set_xticks(ax1.get_xticks())
+ax3.set_xticklabels(df["Clock Time"], rotation=45 )
+ax3.set_xlabel("Clock Time", weight="bold", labelpad=15)
+```
+
+Create legend for both axes
+
+```python
+h1, l1 = ax1.get_legend_handles_labels()
+h2, l2 = ax2.get_legend_handles_labels()
+ax1.legend(h1 + h2, l1 + l2, loc="upper left", bbox_to_anchor=(0.01, 0.999))
+```
+
+Create an annotation on the plot to indicate increased scores reflect sleepiness
+
+```python
+ax1.text(-5,2, "Sleepiness", size=10, ha="center", va="bottom", weight="bold")
+ax1.text(-5,-1.7, "Alertness", size=10, ha="center", va="top", weight="bold")
+ax1.annotate("", xy=(-0.33, 0.2), xytext=(-0.33, 0.8),
+             xycoords="axes fraction", textcoords="axes fraction",
+             arrowprops=dict(arrowstyle="<->", lw=2), clip_on=False)
+```
