@@ -108,3 +108,7 @@ ax1.annotate("", xy=(-0.33, 0.2), xytext=(-0.33, 0.8),
              xycoords="axes fraction", textcoords="axes fraction",
              arrowprops=dict(arrowstyle="<->", lw=2), clip_on=False)
 ```
+
+### Result
+
+![The final result. This shows sleepiness scores and melatonin levels relative to time from DLMO](Circadian_Visualisation.png)
