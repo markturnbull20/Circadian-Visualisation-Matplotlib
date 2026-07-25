@@ -15,5 +15,15 @@ It is important to visualise data in a way that reflects the influence of the bo
 
 The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
 
+## Project
+
+In this example dataset, participants remain awake under controlled laboratory conditions for 24-hours. Subjective sleepiness ratings are recorded every two hours, along with saliva samples to measure melatonin levels. The data are aligned relative to DLMO. 
+
+This visualisation illustrates how sleepiness and alertness change across the sleep-wake cycle relative to a biological marker of circadian timing. The plot uses dual x and y axes to display time relative to DLMO alongside the corresponding clock time and sleepiness and melatonin levels. 
+
+### Example Data
+
+
+
 
 
