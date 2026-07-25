@@ -11,10 +11,6 @@ As a circadian scientist interested in human behaviour, I work with time-series 
 
 It is important to visualise data in a way that reflects the influence of the body's internal clock rather than relying only on standard clock time. In this repository, I show figures that were created during my PhD to visualise subjective sleepiness, cognitive performance, and neurophysiological data relative to DLMO (dim light melatonin onset). 
 
-** Data Privacy Note** 
-
-The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
-
 ## Project
 
 In this example dataset, participants remain awake under controlled laboratory conditions for 24-hours. Subjective sleepiness ratings are recorded every two hours, along with saliva samples to measure melatonin levels. The data are aligned relative to DLMO. 
@@ -23,7 +19,12 @@ This visualisation illustrates how sleepiness and alertness change across the sl
 
 ### Example Data
 
+The example dataset can be found here:
 
+[Example Dataset](Example_Data.csv)
 
+** Data Privacy Note** 
+
+The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
 
 
