@@ -25,7 +25,7 @@ The example dataset can be found here: [Example Dataset](Example_Data.csv)
 
 The datasets included here are examples created to demonstrate the plots. They do not contain real participant information or represent actual study results.
 
-### Using Matplotlib to Create a Visualisation of the Sleepiness Data 
+### Using matplotlib to create a visualisation of the example sleepiness data 
 
 Import the appropriate libraries 
 
@@ -34,4 +34,26 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 %matplotlib inline
+```
+
+Load the dataset as a pandas DataFrame 
+
+```python
+df = pd.read_csv("Example_Data.csv)
+```
+
+Create a plot that has four axes 
+
+```python
+fig, ax1 = plt.subplots()
+ax2 = ax1.twinx()
+ax3 = ax1.twiny()
+```
+
+Plot the data from sleepiness data, with time from DLMO on the x axis and sleepiness scores and melatonin levels on the y axes 
+
+```python
+ax2.fill_between(df["Circadian_Time"], df["Melatonin_Value"], color="#56B4E9", alpha=0.2, label="Melatonin Levels")
+ax1.plot(df["Circadian_Time"], df["Sleepiness_Z_Score"], color="#E66808", marker="s", markerfacecolor = "#8F9190", 
+         markeredgecolor= "#000000", markersize=10, linewidth=3, label="Sleepiness Scores (95% CI)")
 ```
