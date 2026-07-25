@@ -27,4 +27,11 @@ The datasets included here are examples created to demonstrate the plots. They d
 
 ### Using Matplotlib to Create a Visualisation of the Sleepiness Data 
 
+Import the appropriate libraries 
 
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
