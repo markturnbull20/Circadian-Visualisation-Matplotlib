@@ -21,7 +21,7 @@ This visualisation illustrates how sleepiness and alertness change across the sl
 
 The example dataset can be found here: [Example Dataset](Example_Data.csv)
 
-The shared dataset contains participant-level averaged data for the sake of this demonstration. However, all statistical analyses would be conducted using trial-level data.
+The shared dataset contains participant-level averaged data to demonstrate how to create the plot. However, all statistical analyses would be conducted using trial-level data.
 
 ** Data Privacy Note** 
 
